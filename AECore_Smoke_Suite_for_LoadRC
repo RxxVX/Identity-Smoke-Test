@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="15b2d78d-254e-42d7-a1f8-4a3414ad80bf" activeEnvironment="Default environment" name="AECore_Smoke_Suite" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="2.6.0 2019-01-14T14:47:06Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="47065157-937d-49c9-9674-82cc715d5137" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://loadrc-services.np.elsevier-ae.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint></con:endpoints><con:resource name="Ip" path="/AEGlobal/ae/session/ip" id="b9575ea2-72b7-47bd-b047-79f5c6c50fa7"><con:settings/><con:parameters/><con:method name="Ip 1" id="6db8c60b-66de-4515-b4e2-d73310272a57" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ip="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/ip">ip:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="74e75c2f-5147-4ef8-9f38-bd3575c66d6a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{
+	"sessionContext":
+	{	
+	 "ipAddr": "165.165.165.165",
+	 "browserType":"IE" 
+	}
+,"view":"legacy",
+"choiceId": "0",
+"authPlatSite":["SD/science"],
+"rmEnabled":true,
+
+
+"fingerPrintToken":""
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/ip</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="user" path="/AEGlobal/ae/user" id="92d9916b-127a-43e2-a64b-3a006b0615d1"><con:settings/><con:parameters/><con:method name="Method 1" id="750609ea-dc3e-46db-b2e8-bb3b776750fd" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:user="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/user">user:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:user="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/user">user:Response</con:element></con:representation><con:request name="Request 1" id="6c55d5b2-cce4-41c9-b936-ae0a74e55add" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{
+	"userContext": {
+		"ipAddr": "174.44.97.251",
+		"platSite": "SD/science",
+		"authToken": "9913a0d61f0af14e8e7b2c09022b83d0bb7cgxrqa"
+	},
+	"dupEmailCheck": true,
+	"regData": {
+		"mktgInfo": false,
+		"agreed": true,
+		"orgType": "3",
+		"orgName": "",
+		"userRole": "7",
+		"developer": false,
+		"subjectArea": ["5"],
+		"regPerson": {
+			"firstName": "test",
+			"lastName": "bulkuser",
+			"salutation": "",
+			"jobTitle": "",
+			"phone": "",
+			"fax": "",
+			"email": "testbulkuserforSD@lexisnexis.com"
+		},
+		"regAddress": {
+			"addr1": "",
+			"addr2": "",
+			"addr3": "",
+			"city": "",
+			"stateProv": "",
+			"postalCode": "",
+			"country": ""
+		}
+	},
+	"password": "cognizant"
+}</con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="{authToken}" path="/AEGlobal/ae/session/switch/{authToken}" id="55d29ca0-532e-4b18-9637-b0867fdb7fd2"><con:settings/><con:parameters><con:parameter><con:name>authToken</con:name><con:value>authToken</con:value><con:style>TEMPLATE</con:style><con:default>authToken</con:default></con:parameter></con:parameters><con:method name="Method 1" id="838c494b-79e7-4551-b01e-4ec4c230a6a2" method="PUT"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:swit="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/switch/">swit:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:swit="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/switch/">swit:Response</con:element></con:representation><con:request name="Request 1" id="9538e277-7755-46af-8200-8bf877e6467b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{
+    "sessionContext": {
+ 	"ipAddr": "165.165.165.165",
+	 "browserType":"IE" 
+},
+    "view": "legacy",
+  "platSite":"SD/science",
+    "rmEnabled": true,
+    "rmToken": "",
+    "choiceId" : "0"
+   
+}</con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="authToken" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="{webuserid}" path="/AEGlobal/ae/user/{webuserid}" id="3302a760-43d1-42e2-b07b-34cb4d250a1c"><con:settings/><con:parameters><con:parameter><con:name>webuserid</con:name><con:value>webuserid</con:value><con:style>TEMPLATE</con:style><con:default>webuserid</con:default></con:parameter><con:parameter><con:name>platSite</con:name><con:value>{platSite}</con:value><con:style>QUERY</con:style><con:default>{platSite}</con:default></con:parameter></con:parameters><con:method name="Method 1" id="2d909313-9b17-4579-bed5-c401114eff01" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="79921ce2-ea7d-49dc-b4f6-d689e772726b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{
+    "webUserId": "36780158",
+    "username": "sampleipusertotest500@lexisnexis.com",
+    "credentialType": "LOGIN_PASSWORD",
+    "socialProvider": null,
+    "registrationData": {
+        "person": {
+            "firstName": "restcsas",
+            "lastName": "大阪大学",
+            "salutation": "Mr",
+            "jobTitle": "TestAnalyst",
+            "phoneNumber": "937-865-6800",
+            "faxNumber": "937-865-6800",
+            "emailAddress": "sampleipusertotest500@lexisnexis.com"
+        },
+        "address": {
+            "address1": "9595 Springboropike",
+            "address2": "",
+            "address3": "",
+            "city": "Miamisburg",
+            "stateProvince": "OH",
+            "postalCode": "45342",
+            "country": "United States"
+        },
+        "allowMktgInfo": true,
+        "haveReadUserAgreement": true,
+        "ecredAware": false,
+        "subjectAreaList": [
+            "8",
+            "9"
+        ],
+        "organizationType": "3",
+        "organizationName": "cognizant",
+        "userRole": "3",
+        "profilePhotoUrl": "NO_IMAGE",
+        "developerFlag": "N",
+        "profileImage": null,
+        "opaqueInfoList": [
+            {
+                "webUserId": "36780158",
+                "name": "test2",
+                "value1": "test2",
+                "updateDate": null,
+                "deleted": null
+            },
+              {
+                "webUserId": "36780158",
+                "name": "test",
+                "value1": null,                
+                "updateDate": null,
+                "deleted": null
+            }
+        ],
+        "enforceStrongPassword": false,
+        "emailAddressVerified": false
+    },
+    "refworksUserData": {
+        "refworksUsrLvlGroupId": "",
+        "refworksUserName": "",
+        "refworksUserPassword": "",
+        "refworksAuthType": "REFWORKS"
+    }
+}</con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="login" path="/AEGlobal/ae/session/login" id="4472943c-24ad-4fc6-8cb5-dcd83a2978b5"><con:settings/><con:parameters/><con:method name="Method 1" id="f9f05619-8ff4-41a7-bdec-20499722ccf9" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201 200</con:status><con:params/><con:element xmlns:log="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/login">log:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="2fd9c2af-fa39-47ee-b170-9c185e0f7350" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{  "sessionContext": {    
+	"ipAddr": "165.165.165.165",
+	 "browserType":"IE"  },  
+	"authPlatSite": [    "SD/science"  ], 
+	"rmEnabled":true,
+	"loginCred": {     
+		"username": "ip_user25225@lexisnexis.com",    
+		"password": "cognizant" },  
+	"view": "legacy",  "choiceId": "0",
+	"addAssoc": {    "remoteAccess": true  }
+}
+</con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="document" path="/AEGlobal/ae/ent/content/document" id="22ac1db6-e8cf-452d-9e71-f41650290947"><con:settings/><con:parameters/><con:method name="Method 1" id="a96d187f-b6a4-4e26-8ff4-01a78a21da6d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:doc="https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/ent/content/document">doc:Response</con:element></con:representation><con:request name="Request 1" id="f875a4d1-a5a1-495a-93ba-379195f558ac" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="X-ElS-LogLevel" value="Debug"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://loadrc-services.np.elsevier-ae.com</con:endpoint><con:request>{
+                "entContext": {
+                                "ipAddr": "198.176.80.34",
+                                "authToken": "",
+                                "platSite": "SD/science"
+                },
+                "view": "detail",
+                "x2ReqPart": [{
+                                "platSite": "SD/science",
+                                "srcKey": "cid",
+                                "docKey": "pii",
+                                "x2ReqDocument": [{
+                                                "label": "rval",
+                                                "srcId": "277741",
+                                                "pubDate": "30-Jun-2013",
+                                                "docId": "pii:S187628591300003X",
+                                                "stage":"S300", 
+                                                "pit":"sco", 
+                                                "oaStatus":"0" 
+                                }]
+
+                }]
+}</con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="bfc834c9-b96f-4313-add4-4ab016a9b270" name="Smoke Suite for EUW"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="944e3d19-6955-4037-8bd9-53251f51114b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="User registration and authentication" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="IP authentication" id="c91be95c-7d8c-4788-b4c7-dfdc066f0f94"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/ip" methodName="Ip 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="IP authentication" id="74e75c2f-5147-4ef8-9f38-bd3575c66d6a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment}</con:endpoint><con:request>{
+	"sessionContext":
+	{	
+	 "ipAddr": "165.165.165.165",
+	 "browserType":"IE" 
+	}
+,"view":"legacy",
+"choiceId": "0",
+"authPlatSite":["SD/science"],
+"rmEnabled":true,
+
+
+"fingerPrintToken":""
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/ip</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="14e1ee48-bec9-48a6-8119-07b2b39c0166" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="497a0583-b2e1-4bba-a7c3-3a0e62e584e0" name="JsonPath Match"><con:configuration><path>.allowedRegType</path><content>[IP]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in authentication" id="016e05a3-9815-44ff-9146-af674d94ecff"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("IP authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("IP authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for registration" id="60c440ef-52df-4fcb-9f83-2261fb4dd983"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>IP User Registration</con:targetStep><con:targetPath>.userContext.authToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="IP User Registration" id="e5664dcd-8f20-4a04-9983-ecc5ac123ce6"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/user" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="IP User Registration" id="6c55d5b2-cce4-41c9-b936-ae0a74e55add" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment}</con:endpoint><con:request>{
+   "password": "cognizant",
+   "dupEmailCheck": true,
+   "regData":    {
+      "orgType": "3",
+      "orgName": "",
+      "regPerson":       {
+         "firstName": "test",
+         "lastName": "bulkuser",
+         "phone": "",
+         "jobTitle": "",
+         "salutation": "",
+         "fax": "",
+         "email": "IP_User${=(int)(Math.random()*50000)}@elsevier.com"
+      },
+      "mktgInfo": false,
+      "developer": false,
+      "subjectArea": ["5"],
+      "userRole": "7",
+      "regAddress":       {
+         "stateProv": "",
+         "country": "",
+         "addr2": "",
+         "addr1": "",
+         "city": "",
+         "addr3": "",
+         "postalCode": ""
+      },
+      "agreed": true
+   },
+   "userContext":    {
+      "platSite": "SD/science",
+      "authToken": "d3a24d0f58b027409c9a62123ab082313afegxrqb",
+      "ipAddr": "174.44.97.251"
+   }
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/user</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9cb6c6be-a43c-488a-941b-954f8bf0b271" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ff9f2256-129d-4032-9aad-7fc0a69f1221" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="passing webuserid" id="e8ff70ef-7327-4754-81ba-6d910c02ae3f"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>webuserid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.webUserId[0]</con:sourcePath><con:targetType>webuserid</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="passing email" id="fa32b75c-3a85-40bf-809d-73d9e4098f9d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>email</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.username[0]</con:sourcePath><con:targetType>email</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in registration" id="48d74ac6-7d4e-48eb-a026-73108a93f33c"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("IP User Registration").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("IP User Registration").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(serverId.contains("CSApplicationService"))
+
+
+</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for authentication" id="93326282-db3b-47f9-a19b-154f8339dbfa"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>authToken</con:targetType><con:targetStep>Switch To Registered User authentication</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="passing rmToken for authentication" id="bad4f941-c75f-4f72-b98f-7fa4226a20dc"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>rmToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.rmToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Switch To Registered User authentication</con:targetStep><con:targetPath>.rmToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Switch To Registered User authentication" id="3c4946af-f5e0-4203-b45f-70bee3326570"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/switch/{authToken}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Switch To Registered User authentication" id="9538e277-7755-46af-8200-8bf877e6467b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment}</con:endpoint><con:request>{
+   "sessionContext":    {
+      "ipAddr": "165.165.165.165",
+      "browserType": "IE"
+   },
+   "choiceId": "0",
+   "view": "legacy",
+   "platSite": "SD/science",
+   "rmToken": "4195e95b6b5ff61065b80d5-9dd2a999d63e14a2-8h",
+   "rmEnabled": true
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/switch/</con:originalUri><con:assertion type="JsonPath Match" id="b8bc3b36-068e-49be-8e95-745f3d1dac9c" name="JsonPath Match"><con:configuration><path>.allowedRegType</path><content>[NONE]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="authToken" value="d3a24d0f58b027409c9a62123ab082313afegxrqb" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in switch to registered user authentication" id="29762d15-37ba-4e63-b265-fd3287215b0e"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Switch To Registered User authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Switch To Registered User authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(serverId.contains("CSApplicationService"))
+
+
+
+
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="ab3df456-d1c7-426a-9418-895e1a98f99b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="User entitlement check" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login Password authentication" id="eec65b5f-aaed-4b14-8542-6055bfb466cf"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login Password authentication" id="2fd9c2af-fa39-47ee-b170-9c185e0f7350" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment}</con:endpoint><con:request>{  "sessionContext": {    
+	"ipAddr": "165.165.165.165",
+	 "browserType":"IE"  },  
+	"authPlatSite": [    "SD/science"  ], 
+	"rmEnabled":true,
+	"loginCred": {     
+		"username": "${#TestSuite#email}",    
+		"password": "cognizant" },  
+	"view": "legacy",  "choiceId": "0",
+	"addAssoc": {    "remoteAccess": false  }
+}
+</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/login</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="1f04db7f-f839-427b-9612-be9ffb72c023" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="7d4404b8-c3f9-4b7d-879b-438362d4e132" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK","statusText":"Successful"}, {"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="59961040-6508-4d60-ab5d-627e569ae724" name="JsonPath Match 1"><con:configuration><path>.auth[0].anonymity</path><content>INDIVIDUAL</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="26693a4f-c3cd-471c-9102-044d7c15bb45" name="JsonPath Match 2"><con:configuration><path>.auth[0].assocType</path><content>ONLINE_REGISTERED</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in Login Password authentication" id="63afe58f-83be-4171-b04e-4ae9dc37879e"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Login Password authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Login Password authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for entitlement check" id="27fa95b3-cc36-45a2-934d-155b017509e7"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login Password authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Entitlement Check</con:targetStep><con:targetPath>.entContext.authToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Entitlement Check" id="9f23d26e-3301-4deb-9945-54f9dc0028e9"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/ent/content/document" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Entitlement Check" id="f875a4d1-a5a1-495a-93ba-379195f558ac" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="X-ElS-LogLevel" value="Debug"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#environment}</con:endpoint><con:request>{
+   "view": "detail",
+   "x2ReqPart": [   {
+      "platSite": "SD/science",
+      "docKey": "pii",
+      "srcKey": "cid",
+      "x2ReqDocument": [      {
+         "stage": "S300",
+         "oaStatus": "0",
+         "srcId": "307761",
+         "docId": "pii:B9780857092083500387",
+         "pit": "sco",
+         "label": "rval"
+      }]
+   }],
+   "entContext":    {
+      "platSite": "SD/science",
+      "authToken": "128967cc8ebb4449622bedf5ebb4ab704258gxrqb",
+      "ipAddr": "165.165.165.165"
+   }
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/ent/content/document</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="40a0dff2-01d7-4d3b-b3b0-2dc24019dc1f" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="9b3b3ff7-6007-43e7-94e0-9f73e7e47fad" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK"}, {"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="86c2bde0-123b-417d-a53a-8dfd8c325538" name="JsonPath Match 1"><con:configuration><path>.x2RespPart[0].x2RespDocument[0].entDetail.reason</path><content>SUB</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="655c3c71-a80e-4e49-a6c2-d8fe6d7884a7" name="JsonPath Match 2"><con:configuration><path>.x2RespPart[0].x2RespDocument[0].entitled</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in Entitlement check" id="3483a8b9-101f-4fb0-b7ee-c1b40d0880c0"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Entitlement Check").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Entitlement Check").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>webuserid</con:name><con:value>39112116</con:value></con:property><con:property><con:name>email</con:name><con:value>ip_user389@elsevier.com</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:testSuite id="33006dae-0815-40e9-873f-fa44f2c3ae6f" name="Smoke Suite for USE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a8fe3b55-a863-4022-b0c1-291389893d33" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="User registration and authentication" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="IP authentication" id="9270ee21-51bb-4b7a-8250-1f2fc7936c6c"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/ip" methodName="Ip 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="IP authentication" id="74e75c2f-5147-4ef8-9f38-bd3575c66d6a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment2}</con:endpoint><con:request>{
+	"sessionContext":
+	{	
+	 "ipAddr": "165.165.165.165",
+	 "browserType":"IE" 
+	}
+,"view":"legacy",
+"choiceId": "0",
+"authPlatSite":["SD/science"],
+"rmEnabled":true,
+
+
+"fingerPrintToken":""
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/ip</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="14e1ee48-bec9-48a6-8119-07b2b39c0166" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="497a0583-b2e1-4bba-a7c3-3a0e62e584e0" name="JsonPath Match"><con:configuration><path>.allowedRegType</path><content>[IP]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in authentication" id="7648756a-5656-4842-8c68-58c4081fdd26"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("IP authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("IP authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for registration" id="8ccacfab-6401-4c5a-bc49-74e41302f5fa"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>IP User Registration</con:targetStep><con:targetPath>.userContext.authToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="IP User Registration" id="1168ca4a-0b6b-433b-a4ca-68e8b2f73ec9"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/user" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="IP User Registration" id="6c55d5b2-cce4-41c9-b936-ae0a74e55add" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment2}</con:endpoint><con:request>{
+   "password": "cognizant",
+   "dupEmailCheck": true,
+   "regData":    {
+      "orgType": "3",
+      "orgName": "",
+      "regPerson":       {
+         "firstName": "test",
+         "lastName": "bulkuser",
+         "phone": "",
+         "jobTitle": "",
+         "salutation": "",
+         "fax": "",
+         "email": "IP_User${=(int)(Math.random()*50000)}@elsevier.com"
+      },
+      "mktgInfo": false,
+      "developer": false,
+      "subjectArea": ["5"],
+      "userRole": "7",
+      "regAddress":       {
+         "stateProv": "",
+         "country": "",
+         "addr2": "",
+         "addr1": "",
+         "city": "",
+         "addr3": "",
+         "postalCode": ""
+      },
+      "agreed": true
+   },
+   "userContext":    {
+      "platSite": "SD/science",
+      "authToken": "cfdac7b45c96144f9e48c2432648f0b956e3gxrqa",
+      "ipAddr": "174.44.97.251"
+   }
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/user</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9cb6c6be-a43c-488a-941b-954f8bf0b271" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ff9f2256-129d-4032-9aad-7fc0a69f1221" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="passing webuserid" id="3afcef1a-5845-46a7-b3e4-39c02ffe06ce"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>webuserid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.webUserId[0]</con:sourcePath><con:targetType>webuserid</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="passing email" id="3e235ec5-bdd8-4d5a-a2c3-a59b02fdc528"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>email</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.username[0]</con:sourcePath><con:targetType>email</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in registration" id="7faa096f-6003-494c-808e-7f5496c6b040"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("IP User Registration").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("IP User Registration").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(serverId.contains("CSApplicationService"))
+
+
+</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for authentication" id="8f199c1f-d73b-4d82-a248-be88ab82842b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>authToken</con:targetType><con:targetStep>Switch To Registered User authentication</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="passing rmToken for authentication" id="869b3130-c4b8-4499-aa08-8feeddf71e72"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>rmToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>IP User Registration</con:sourceStep><con:sourcePath>.rmToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Switch To Registered User authentication</con:targetStep><con:targetPath>.rmToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Switch To Registered User authentication" id="5445a933-77a2-4c00-b3de-b708dce643da"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/switch/{authToken}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Switch To Registered User authentication" id="9538e277-7755-46af-8200-8bf877e6467b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-els-authentication" value="SCIDIR"/>
+  &lt;con:entry key="content-type" value="application/json"/>
+  &lt;con:entry key="x-els-resourceversion" value="1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment2}</con:endpoint><con:request>{
+   "sessionContext":    {
+      "ipAddr": "165.165.165.165",
+      "browserType": "IE"
+   },
+   "choiceId": "0",
+   "view": "legacy",
+   "platSite": "SD/science",
+   "rmToken": "f294e95b6b5ff61065b80d5-9dd2a999d63e14a2",
+   "rmEnabled": true
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/switch/</con:originalUri><con:assertion type="JsonPath Match" id="b8bc3b36-068e-49be-8e95-745f3d1dac9c" name="JsonPath Match"><con:configuration><path>.allowedRegType</path><content>[NONE]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="authToken" value="cfdac7b45c96144f9e48c2432648f0b956e3gxrqa" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in switch to registered user authentication" id="63dd336d-8d01-4abd-9a54-786e18e9fa17"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Switch To Registered User authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Switch To Registered User authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(serverId.contains("CSApplicationService"))
+
+
+
+
+
+</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="f1918220-a194-491c-8d3b-1b52914b5053" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="User entitlement check" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login Password authentication" id="3bf6df74-bbfc-4e93-9cc4-3602ba5641d9"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/session/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login Password authentication" id="2fd9c2af-fa39-47ee-b170-9c185e0f7350" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-LogLevel" value="Debug"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#environment2}</con:endpoint><con:request>{  "sessionContext": {    
+	"ipAddr": "165.165.165.165",
+	 "browserType":"IE"  },  
+	"authPlatSite": [    "SD/science"  ], 
+	"rmEnabled":true,
+	"loginCred": {     
+		"username": "${#TestSuite#email}",    
+		"password": "cognizant" },  
+	"view": "legacy",  "choiceId": "0",
+	"addAssoc": {    "remoteAccess": false  }
+}
+</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/session/login</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="1f04db7f-f839-427b-9612-be9ffb72c023" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="7d4404b8-c3f9-4b7d-879b-438362d4e132" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK","statusText":"Successful"}, {"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="59961040-6508-4d60-ab5d-627e569ae724" name="JsonPath Match 1"><con:configuration><path>.auth[0].anonymity</path><content>INDIVIDUAL</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="26693a4f-c3cd-471c-9102-044d7c15bb45" name="JsonPath Match 2"><con:configuration><path>.auth[0].assocType</path><content>ONLINE_REGISTERED</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in Login Password authentication" id="93e56ae6-6fd6-49e4-93a1-e4e19867c6f5"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Login Password authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Login Password authentication").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:testStep type="transfer" name="passing authToken for entitlement check" id="de1aab3e-b356-4945-b6da-403928872c46"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>authToken</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login Password authentication</con:sourceStep><con:sourcePath>.authToken[0]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Entitlement Check</con:targetStep><con:targetPath>.entContext.authToken</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Entitlement Check" id="5b0a9470-a1a5-4df1-8908-68a8ccb230fe"><con:settings/><con:config service="https://loadrc-services.np.elsevier-ae.com" resourcePath="/AEGlobal/ae/ent/content/document" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Entitlement Check" id="f875a4d1-a5a1-495a-93ba-379195f558ac" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="X-ElS-LogLevel" value="Debug"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#environment2}</con:endpoint><con:request>{
+   "view": "detail",
+   "x2ReqPart": [   {
+      "platSite": "SD/science",
+      "docKey": "pii",
+      "srcKey": "cid",
+      "x2ReqDocument": [      {
+         "stage": "S300",
+         "oaStatus": "0",
+         "srcId": "307761",
+         "docId": "pii:B9780857092083500387",
+         "pit": "sco",
+         "label": "rval"
+      }]
+   }],
+   "entContext":    {
+      "platSite": "SD/science",
+      "authToken": "47ee108795e9174b006abcd-2c66dfb5a7dagxrqa",
+      "ipAddr": "165.165.165.165"
+   }
+}</con:request><con:originalUri>https://loadrc-services.np.elsevier-ae.com/AEGlobal/ae/ent/content/document</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="40a0dff2-01d7-4d3b-b3b0-2dc24019dc1f" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="9b3b3ff7-6007-43e7-94e0-9f73e7e47fad" name="JsonPath Match"><con:configuration><path>.status</path><content>[{"statusCode":"OK"}, {"statusCode":"OK"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="86c2bde0-123b-417d-a53a-8dfd8c325538" name="JsonPath Match 1"><con:configuration><path>.x2RespPart[0].x2RespDocument[0].entDetail.reason</path><content>SUB</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="655c3c71-a80e-4e49-a6c2-d8fe6d7884a7" name="JsonPath Match 2"><con:configuration><path>.x2RespPart[0].x2RespDocument[0].entitled</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Validate response headers in Entitlement check" id="dc2daa77-99c9-4c0b-bd29-7e11b4b8642b"><con:settings/><con:config><script>def serverId= String.valueOf(testRunner.testCase.getTestStepByName("Entitlement Check").httpRequest.response.responseHeaders["X-ELS-ServerId"])
+log.info testRunner.testCase.getTestStepByName("Entitlement Check").httpRequest.response.responseHeaders["X-ELS-ServerId"]
+
+assert(!serverId.contains("CSApplicationService"))</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>webuserid</con:name><con:value>39112091</con:value></con:property><con:property><con:name>email</con:name><con:value>ip_user39264@elsevier.com</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:properties><con:property><con:name>environment</con:name><con:value>https://loadrc-euw-services.np.elsevier-ae.com</con:value></con:property><con:property><con:name>environment2</con:name><con:value>https://loadrc-use-services.np.elsevier-ae.com</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/><con:tags/></con:soapui-project>
