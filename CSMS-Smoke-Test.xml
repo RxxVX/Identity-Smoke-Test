@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0a51770a-db46-40c4-8a80-c04c0bd7025c" created="2.6.0" activeEnvironment="certrc" name="CSMS Smoke Test" resourceRoot="" updated="2.6.0 2019-01-14T14:47:06Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="fa68f698-d93e-4cc8-b94d-f76a25fc0ac2" wadlVersion="http://wadl.dev.java.net/2009/02" name="RESTCSMS" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="8985413c-b0dc-40b4-b85b-be3d95b0bdfffileName">RESTCSMS</con:setting>
+  </con:settings>
+  
+  <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+    <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+<con:resource name="ClientLicense" path="CSMSWebApp/ae/clientLicense" id="85aa03b0-08a9-41f6-a87a-4a1d048b0dd4">
+  <con:settings>
+    <con:setting id="a2a18ce4-9af4-4695-a7d1-368c9d916144fileName">ClientLicense</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="173def31-20b1-4f89-9c76-ccda40761f48" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cli="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/clientLicense">cli:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html;charset=iso-8859-1</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="ffb1803e-5605-43a7-9242-d5842cc41206" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request>{
+    "platformCode" : ["LT"],
+    "scope" : "DEFAULT",
+    "license" : {
+        "webUserId" : "39586879",
+        "entType" : "OP",
+        "contentTitle" :
+            { "contentType" : "JL", "keyName" : "cid", "contentId" : "277741" },
+        "accessDates" :
+            { "beginDate" : "01-Jan-2020 00:00:00", "endDate" : "31-Dec-2020 23:59:59" },
+        "contentDates" :
+            { "beginDate" : "", "endDate" : "" },
+        "agreementNum" : "KY23111"
+    }
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/><con:parameters/>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+</con:resource><con:resource name="ContentPackage" path="CSMSWebApp/ae/content/package" id="4c0c8aa1-eefc-44de-bbd1-dc06c4659a49">
+  <con:settings>
+    <con:setting id="44b407a3-9dc0-4dea-a2d5-dad1ca3042bcfileName">ContentPackage</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>allListId</con:name>
+      <con:value>{allListId}</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>{allListId}</con:default>
+    </con:parameter>
+    <con:parameter required="true">
+      <con:name>filter</con:name>
+      <con:value>{string}</con:value>
+      <con:style>QUERY</con:style>
+      <con:default>{string}</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="31c54b51-deff-4799-a3eb-85b19fe380ba" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:pac="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/content/package">pac:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:pac="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/content/package">pac:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="c5fed49f-d0b3-49f0-a8a6-d00ca767a5cb" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+</con:resource><con:resource name="Credentials" path="CSMSWebApp/ae/cred/ip" id="dd669207-b4a2-4731-ad6a-1941575bbf09">
+  <con:settings>
+    <con:setting id="c8175677-4146-4478-b3f9-4d1aa66ac8b1fileName">Credentials</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getIpRangeGroupByDeptId" id="a1e4098a-4cc7-4895-a435-17356c697c23" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>deptId</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ip="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/cred/ip">ip:Response</con:element>
+    </con:representation>
+    <con:request name="getIpRangeGroupByDeptId" id="758dc2a3-5cbf-497a-a51e-cf972ee1338d" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="deptId" value="{deptId}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>deptId</con:entry>
+      </con:parameterOrder>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+</con:resource><con:resource name="PlatformHierarchy" path="CSMSWebApp/ae/org" id="de025fcc-6faf-4524-950e-66623e958cf5">
+  <con:settings>
+    <con:setting id="b7bbd3ce-bdbb-4ea9-906d-5d560c51df73fileName">PlatformHierarchy</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="Product" path="product" id="31bd3ccf-18cc-42c3-90b1-cbef31647f88">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="getProduct" id="70745554-14dd-40ee-9915-001b93b12b23" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>productIds</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="FAULT">
+        <con:mediaType>text/html;charset=iso-8859-1</con:mediaType>
+        <con:status>500</con:status>
+        <con:params/>
+        <con:element>html</con:element>
+      </con:representation>
+      <con:representation type="REQUEST">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+      </con:representation>
+      <con:representation type="FAULT">
+        <con:mediaType xsi:nil="true"/>
+        <con:status>404</con:status>
+        <con:params/>
+        <con:element>data</con:element>
+      </con:representation>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:prod="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/org/product">prod:Response</con:element>
+      </con:representation>
+      <con:representation type="RESPONSE">
+        <con:mediaType xsi:nil="true"/>
+        <con:status>0</con:status>
+        <con:params/>
+        <con:element>data</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="aa193a2c-0b54-446a-88ce-08a5f95ee1f5" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="productIds" value="{productId},{productId}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>productIds</con:entry>
+        </con:parameterOrder>
+      <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="Sites" path="sites" id="cf51cb53-d779-49ea-b759-3dbc550a2ce9">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="getSites" id="2fb8c4c3-b3f2-4fd1-a198-803d46ffd675" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>siteIds</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:sit="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/org/sites">sit:Response</con:element>
+      </con:representation>
+      <con:request name="Request 1" id="3d6c357e-a7bc-4663-a7d7-19e66108cafb" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="siteIds" value="{siteId},{siteId}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>siteIds</con:entry>
+        </con:parameterOrder>
+      <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="Department" path="dept" id="13301e20-a08c-4965-abdf-5c8db1a1ae96">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="getDeptment" id="446f4122-f2fc-4504-8d71-9f826516d3ec" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>deptIds</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:representation type="RESPONSE">
+        <con:mediaType>application/json</con:mediaType>
+        <con:status>200</con:status>
+        <con:params/>
+        <con:element xmlns:dept="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/org/dept">dept:Response</con:element>
+      </con:representation>
+      <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="1ca876eb-f7aa-496c-bb22-2a52ed97b7ea" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="deptIds" value="{deptId},{deptId}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>deptIds</con:entry>
+        </con:parameterOrder>
+      <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+    </con:method>
+  </con:resource>
+  <con:method name="getPlatformHierarchy" id="2a80724e-3f68-41dd-b8e0-b23130ae029e" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>platformCode</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>startingId</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>startingLevel</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html;charset=iso-8859-1</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:org="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/org">org:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="68bc2ec3-6021-47b8-bde5-f070043d9b46" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="startingLevel" value="WEBUSER"/>
+        <con:entry key="platformCode" value="SD"/>
+        <con:entry key="startingId" value="11585980"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>platformCode</con:entry>
+        <con:entry>startingId</con:entry>
+        <con:entry>startingLevel</con:entry>
+      </con:parameterOrder>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+</con:resource><con:resource name="UserDepartmentAssociation" path="CSMSWebApp/ae/uda" id="b2017983-5383-4bd7-8930-7ab6e83bd9e3">
+  <con:settings>
+    <con:setting id="2f8a0e82-d25d-4aa1-b13c-70857f429c8bfileName">UserDepartmentAssociation</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getUserDeptAssoc" id="9622b10f-8f34-4505-a689-8bbe63f327b7" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>userDeptAssocLevelValues</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>403 404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>204 0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:uda="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/uda">uda:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html;charset=iso-8859-1</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:uda="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/uda">uda:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="84ba9ecf-6959-451c-bf58-9122d7f5f1bb" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="userDeptAssocLevelValues" value="webUserId={webUserId}|deptId={deptId}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>userDeptAssocLevelValues</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="addUserDeptAssoc" id="6d876b7e-0ad6-42ec-a5d9-35c9fe848a4d" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>userDeptAssocLevelValues</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html;charset=iso-8859-1</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="c28fb712-f260-4e35-9e41-b6af5b11485e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="userDeptAssocLevelValues" value="priorityLevel={priorityLevel}|webUserId={webUserId}|startDate={dd-mmm-yyyy}|assocType=Web Created Remote Access|deptId={deptId}|endDate={dd-mmm-yyyy}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>userDeptAssocLevelValues</con:entry>
+      </con:parameterOrder>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+  <con:method name="deleteUserDeptAssoc" id="47e7b53c-148d-45a5-b3f9-60c73788eff5" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>userDeptAssocLevelValues</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="cd851326-d50b-4f8e-96a9-0b0e69c1dbfc" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="userDeptAssocLevelValues" value="webUserId={webUserId}|deptId={deptId}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>userDeptAssocLevelValues</con:entry>
+      </con:parameterOrder>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource><con:resource name="healthcheck.html" path="/healthcheck.html" id="adab20b1-bf91-4edf-af8d-cf0bf82251ae">
+  <con:settings>
+    <con:setting id="16e98ec4-7fb7-47c6-9d4e-e4df894dae87fileName">healthcheck.html</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="672040a3-91cd-407c-b2f5-4300dc7a7083" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html;charset=ISO-8859-1</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="32ceee8b-a6cd-4076-afc4-2d9ae3826dd5" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    <con:environmentSpec><con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+  </con:method>
+</con:resource></con:interface><con:testSuite id="d0b9897b-fed9-4b28-9068-98a7bfbd0118" name="AE CREATE LICENSE">
+  <con:settings>
+    <con:setting id="4bc85627-a1ef-418e-aaea-47d6fd9e243ffileName">AE-CREATE-LICENSE</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+<con:testCase id="48974773-3308-4351-b852-103a27b4c3d1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="addClientLicense" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="ec49c2a5-216c-48da-8201-f995103f7566fileName">addClientLicense</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="addClientLicense" id="08c637b6-9c77-48c3-9925-a0e05db5031b">
+    <con:settings/>
+    <con:config service="RESTCSMS" resourcePath="/CSMSWebApp/ae/clientLicense" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="addClientLicense" id="ac58c59c-9a7a-4440-a7f6-9f6709e6eecd" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="LITERATUM"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://loadrc-csms.np.elsevier-ae.com/CSMSWebApp</con:endpoint><con:request>{
+    "platformCode" : ["SD"],
+    "scope" : "DEFAULT",
+    "license" : {
+        "webUserId" : "4856111",
+        "entType" : "OP",
+        "contentTitle" :
+            { "contentType" : "JL", "keyName" : "cid", "contentId" : "277741" },
+        "accessDates" :
+            { "beginDate" : "01-Jan-2020 00:00:00", "endDate" : "31-Dec-2020 23:59:59" },
+        "contentDates" :
+            { "beginDate" : "", "endDate" : "" },
+        "agreementNum" : "KY23112"
+    }
+}</con:request>
+        <con:originalUri>https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/clientLicense</con:originalUri>
+        <con:assertion type="MessageContentAssertion" id="93107724-e432-4707-b53a-b9d831a5c665" name="Message Content Assertion">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/clientLicense';
+//ns1:Response[1]/ns1:status[1]/ns1:statusCode[1]</con:xpath>
+              <con:element>statusCode</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>OK</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:xpath>declare namespace ns1='https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/clientLicense';
+//ns1:Response[1]/ns1:status[1]/ns1:statusText[1]</con:xpath>
+              <con:element>statusText</con:element>
+              <con:type xsi:nil="true"/>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Successful</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<Response xmlns="https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/clientLicense">
+   <status>
+      <statusCode>OK</statusCode>
+      <statusText>Successful</statusText>
+   </status>
+   <contentLevelValues>
+      <e>licenseId=16113619|cid=277741</e>
+   </contentLevelValues>
+</Response>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Valid HTTP Status Codes" id="9d9911c3-b1de-497d-bb5d-d2d8a264782e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/><con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="bc37ac1b-b6c0-4ce0-b71e-8d215cda96b4">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c29fa55-ef16-4552-ace9-428cf1badf5e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase></con:testSuite><con:testSuite id="a34aeb54-2c51-4339-8f41-c88235862f68" name="AE ORG DEPARTMENT">
+  <con:settings>
+    <con:setting id="a4228d44-5749-4514-bc5d-e95c8414dc5afileName">AE-ORG-DEPARTMENT</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+<con:testCase id="5f1713a6-73c5-4d18-b5c5-05510e033b6d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="getDeptHierarchy" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="27c5adb1-9314-4cb8-8234-6cab971743dffileName">getDeptHierarchy</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="c4b735b2-e455-4dc3-a1fd-df362556c279">
+    <con:settings/>
+    <con:config service="RESTCSMS" resourcePath="/CSMSWebApp/ae/org/dept" methodName="getDeptment" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="9dc5b49c-b590-462d-b54d-58a9b12a69ea" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="X-ELS-ResourceVersion" value="1"/>
+  &lt;con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:endpoint>https://loadrc-csms.np.elsevier-ae.com/CSMSWebApp</con:endpoint><con:request/>
+        <con:originalUri>https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/org/dept</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="bec89fdb-d005-4763-b33a-8b8f74771a85" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration><codes>200</codes></con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/><con:parameters><entry key="deptIds" value="488861" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:parameterOrder>
+          <con:entry>deptIds</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="8c29fa55-ef16-4552-ace9-428cf1badf5e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase></con:testSuite><con:testSuite id="9cd8193c-c2af-466b-97e1-34fcc664566b" name="AE UDA">
+  <con:settings>
+    <con:setting id="5a26f62e-9f1f-4759-9d00-a2b53c1c64affileName">AE-UDA</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+<con:testCase id="74f9d86e-6f71-46bc-a45a-9691bca1e2e7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="addUserDeptAssoc" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="15276159-353c-46fd-bfb9-575202aff435fileName">addUserDeptAssoc</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="addUserDeptAssoc" id="09f7ad7b-23ae-421d-aeeb-d5c703b5f93c">
+    <con:settings/>
+    <con:config service="RESTCSMS" methodName="addUserDeptAssoc" resourcePath="/CSMSWebApp/ae/uda" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="addUserDeptAssoc" id="9c93cc6a-4896-42bd-9afd-9988396a3b7a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/uda</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="17fd041e-55c9-4068-8318-184096469d78" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/><con:parameters><entry key="userDeptAssocLevelValues" value="priorityLevel=Standard Institutional Access|webUserId=4856111|startDate=08-Dec-2019|assocType=Web Created Remote Access|deptId=488861|endDate=08-Dec-2099" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="bc37ac1b-b6c0-4ce0-b71e-8d215cda96b4">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c29fa55-ef16-4552-ace9-428cf1badf5e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase><con:testCase id="cbf5e9d6-2289-4b10-bea7-1ebdad57c8ff" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="getUserDeptAssoc with single webUserId and single deptId" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="611aa629-ee2a-4804-b891-80b55d30a4bcfileName">getUserDeptAssoc-with-single-webUserId-and-single-deptId</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="getUserDeptAssoc" id="228da31b-eb70-4d4a-90c9-f948ca69414a">
+    <con:settings/>
+    <con:config service="RESTCSMS" resourcePath="/CSMSWebApp/ae/uda" methodName="getUserDeptAssoc" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="getUserDeptAssoc" id="df8ecf5f-0e57-4e7a-8751-030c17d8b2ea" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://certrc-csms.np.elsevier-ae.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/uda</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="50ccc989-2442-4027-a114-8271e64df89e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/><con:parameters><entry key="userDeptAssocLevelValues" value="webUserId=4856111|deptId=488861" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:parameterOrder>
+          <con:entry>userDeptAssocLevelValues</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="f38733ac-dc19-4ffe-a261-ef68dd9781b7">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="bc37ac1b-b6c0-4ce0-b71e-8d215cda96b4">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c29fa55-ef16-4552-ace9-428cf1badf5e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase><con:testCase id="d36315ce-a528-4feb-955d-01c8472cf890" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="deleteUserDeptAssoc" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="940ab3b0-a212-4443-b61b-e4ee8b74df53fileName">deleteUserDeptAssoc</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="deleteUserDeptAssoc" id="851a01df-f539-49ba-b16a-6ee0150692a5">
+    <con:settings/>
+    <con:config service="RESTCSMS" resourcePath="/CSMSWebApp/ae/uda" methodName="deleteUserDeptAssoc" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="deleteUserDeptAssoc" id="886233df-2628-43a1-9319-9065e37b1306" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-ELS-Authentication" value="SCIDIR"/>
+  <con:entry key="X-ELS-ResourceVersion" value="1"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+        </con:settings>
+        <con:endpoint>https://loadrc-csms.np.elsevier-ae.com/CSMSWebApp</con:endpoint><con:request/>
+        <con:originalUri>https://certrc-csms.np.elsevier-ae.com/CSMSWebApp/ae/uda</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="074aa1c2-8faf-40ab-a4cb-16ba40c0f248" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="userDeptAssocLevelValues" value="webUserId=13181797|deptId=294253"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>userDeptAssocLevelValues</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="bc37ac1b-b6c0-4ce0-b71e-8d215cda96b4">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="8c29fa55-ef16-4552-ace9-428cf1badf5e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        <con:entry environmentId="a1f13728-987a-4a69-81f3-2a27c8323170"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="c96fb796-b6a7-4142-b17c-1c5d7781c284"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:environment id="a1f13728-987a-4a69-81f3-2a27c8323170" name="LoadRC"><con:service type="REST" name="RESTCSMS"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://loadrc-csms.np.elsevier-ae.com</con:endpoint></con:service><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment><con:environment id="c96fb796-b6a7-4142-b17c-1c5d7781c284" name="certrc"><con:service type="REST" name="RESTCSMS"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://certnx-csms.np.elsevier-ae.com</con:endpoint></con:service><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment><con:authRepository/><con:tags/></con:soapui-project>
